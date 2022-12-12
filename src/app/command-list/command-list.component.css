@@ -5,7 +5,7 @@ table {
     overflow: hidden;
 }
 
-tr {
+.tr {
     border-bottom: 1px solid #EBEDF3;
 }
 
