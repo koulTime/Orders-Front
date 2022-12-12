@@ -1,28 +1,31 @@
 <table class="tab-content">
-  <tr>
+  <tr class="tr">
     <th *ngFor="let header of headers">
       {{ header }}
     </th>
   </tr>
 
-  <tr *ngFor="let product of products">
+  <tr *ngFor="let product of products" class="tr">
     <td>{{ product.name }}</td>
-    <td>{{ product.id }}</td>
+
     <td>
       <img height="50px" width="50px" src="{{ product.image }}" alt="" />
     </td>
+
     <td>
       <tr *ngFor="let component of product.components">
-        <td>{{ component.name }}</td>
+        <td style="text-align: center; margin-left: auto; margin-right: auto">
+          {{ component.name }}
+        </td>
       </tr>
     </td>
     <td>{{ product.quantity }}</td>
+    <td>{{ product.type }}</td>
     <td>
       <a
-        routerLink="/forecast"
-        class="btn btn-light-primary btn-succes font-weight-bold btn-sm px-4 font-size-base ml-2"
-        >Validate</a
-      >
+        routerLink="/"
+        class="btn btn-light-primary font-weight-bold btn-sm px-4 font-size-base ml-2"
+        >Serve</a>
       <a
         (click)="delete(product.id)"
         class="btn btn-light-primary bt-danger font-weight-bold btn-sm px-4 font-size-base ml-2"

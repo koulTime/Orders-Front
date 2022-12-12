@@ -9,11 +9,11 @@ export class CommandListComponent implements OnInit {
 
   products: any;
   headers = [
-    'Product Name',
-    'Product id',
-    'image',
-    'Components',
-    'quantity',
+    'Item Name',
+    'Item image',
+    'Item Components',
+    'Item quantity',
+    'Type Of Order',
     'Action'
   ];
   constructor(/*private productService: ProductService*/) { }
@@ -22,8 +22,8 @@ export class CommandListComponent implements OnInit {
     this.getProducts();
   }
   delete(id: string): void {
-    console.log("no")
-    /*this.reservationService.delete(id).subscribe(msg => {
+
+    /*this.orderService.delete(id).subscribe(msg => {
       this.error = msg.error;
       console.log(msg);
       if (!this.error) {
@@ -37,7 +37,8 @@ export class CommandListComponent implements OnInit {
     }, error => {
       console.log(error);
     });*/
-    this.products=[{'name':'Meat & Fish','id':'2','components':[{'name':'Fish / calamar','quantity':2}],'image':'https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.ibb.co%2Fy0zXYj5%2Fcarp-fish.png&w=48&q=75','quantity':'2'},{'name':'Sushi','id':'3','quantity':'25','image':'https://th.bing.com/th/id/OIP.zxLULxIskXsPw5H0uALIAwHaHa?pid=ImgDet&rs=1','components':[{'name':'sushi','quantity':2}]}]
+    this.products=[{'name':'Sandwich','id':'4','type':'Online','components':[{'name':'Lettuce / Tomato','quantity':2}],'image':'https://th.bing.com/th/id/OIP.1ZbcHW_vldK_9txGVZRYbwHaE8?pid=ImgDet&rs=1&fbclid=IwAR0bDOENQJHIn9NMKVGht8Qj-l1gF7BIvh3OlngOrN4OxIeIMWT99IPBy8g','quantity':'4'},
+      {'name':'Pizza','id':'3','quantity':'1','image':'https://th.bing.com/th/id/OIP.KIU0ec1ueT7AVnrpY0peZwHaFj?pid=ImgDet&rs=1&fbclid=IwAR0YW2yKaR4bzaknwqyP8S0UuMsFLSKqkWdu4rFcg5fg4PN7VdN10mkLHIQ','type':'On Site','components':[{'name':'Thon','quantity':2}]}]
 
   }
 
